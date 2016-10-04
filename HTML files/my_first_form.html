@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Form</title>
+    <link rel="stylesheet" href="/css/selectors.css">
+</head>
+<body>
+    <form method="GET" action="http://requestb.in/1bgjssh1"> <!--don't forget to put an action if you want it
+                                                                 to do it-->
+        <p>
+            <h2>Testing</h2>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text"> <!--required means that
+            have to submit something here before you submit the form and autofocus means that the browser will
+            make the box highlighted or able for the user to focus in on the form -->
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" >
+        </p>
+        <p>
+            <label for="password">Company</label>
+            <input id="password" name="Company" type="password" placeholder="Where do you work?">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+        <textarea id="email_body" name="email_body" rows="5" cols="40">Content Here</textarea>
+    </form>
+
+
+    <h2>Compose an email</h2>
+    <form class="form" action="http://requestb.in/1bgjssh1" method="post">
+        <p>
+            <label for="from">From:</label>
+            <input type="text" name="from" id="from" placeholder="enter your email" required>
+        </p>
+        <p>
+            <label for="to">To:</label>
+            <input type="text" name="from" id="To" placeholder="enter their email" required>
+        </p>
+    </form>
+    <input type="checkbox" id="mailing_list" name="mailing_list" value="yes" checked>
+
+    <label for="mailing_list">Sign me up for the mailing list!</label>
+
+
+    <p>What is the capital of Texas?</p>
+    <label>
+        <input type="radio" name="q1" value="houston">
+        Houston
+    </label>
+    <label>
+        <input type="radio" name="q1" value="dallas">
+        Dallas
+    </label>
+    <label>
+        <input type="radio" name="q1" value="austin">
+        Austin
+    </label>
+    <label>
+        <input type="radio" name="q1" value="san antonio">
+        San Antonio
+    </label>
+
+    <form action="http://requestb.in/1bgjssh1">
+        <h2>Multiple Choice Test</h2>
+        <p>What is Beyoncé's daughters name?</p>
+        <label>
+            <input type="radio" name="North" value="North">
+            North
+        </label>
+        <label>
+            <input type="radio" name="Saint" value="Saint">
+            Saint
+        </label>
+        <label>
+            <input type="radio" name="IV" value="IV">
+            IV
+        </label>
+        <label>
+            <input type="radio" name="Blue Ivy" value="Blue Ivy">
+            Blue Ivy
+        </label>
+        <input type="submit">
+    </form>
+
+    <form action="http://requestb.in/1bgjssh1">
+        <h2>Select Testing</h2>
+        <label for="transmission"> Select your transmission type:</label>
+        <select id="transmission" name="transmission">
+
+            <option value="1" selected>Yes</option>
+            <option value="2" >No</option>
+        </select>
+        <input type="submit"> <!--the input usually goes outside the <select> tabs-->
+    </form>
+
+    <form action="http://requestb.in/1bgjssh1">
+        <h2>What is/ are Tito's Favorite Colors?</h2>
+        <label for="os">Choose Wisely</label>
+        <select id="os" name="os[]" multiple>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+        </select>
+        <input type="submit">
+    </form>
+
+    <form action="http://requestb.in/1bgjssh1">
+        <h2>Does Tito Know What He Is Doing?</h2>
+        <label for="answer">Answer</label>
+        <select id="answer" name="answer[]" multiple>
+            <option value="Yes">Yes</option>
+            <option value="Maybe">Maybe</option>
+            <option value="Nah">Nah</option>
+        </select>
+        <input type="submit">
+    </form>
+</body>
+

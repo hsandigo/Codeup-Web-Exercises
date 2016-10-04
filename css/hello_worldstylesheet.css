@@ -1,0 +1,18 @@
+
+h2{color:cadetblue;font-weight: 100;}
+
+body{background-image: url('../img/grunge_wall.png');width: 1800px;
+    height: 2400px;} /*background-color:cadetblue;*/
+main{color:white; font-style:italic; font-weight: 100; font-family: "American Typewriter"}
+h1{color:yellow}
+
+ol{color:white}
+ul{color:white; list-style: georgian}
+blockquote{color:white}
+
+a:visited{color: white}
+a:hover{color:yellow}
+a:active{color:lightseagreen}
+
+td{border-bottom: groove; border-bottom-color: yellow; }
+tr{border-top: groove; border-top-color: yellow; }

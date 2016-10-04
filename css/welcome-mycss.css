@@ -1,0 +1,74 @@
+/*=========my own css========*/
+body, html {
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+    margin-top: 2%;
+    padding: 0;
+    height: 100%;
+    background-color: lightblue;
+}
+
+.headings {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: Eurostile;
+    font-size: 90px;
+}
+
+h1, h3{
+    display: inline;
+    margin-bottom: -5px;
+}
+
+.navbar-navbar-fixed-top {
+    font-family: Eurostile;
+}
+
+/*try to fix the right edge of this*/
+.container{
+    background-color: rgba(241, 241, 201, 0.78);
+}
+
+.about-me {
+    font-size: 125%;
+    text-align: center;
+    font-family: Eurostile;
+    max-width: 50%;
+}
+
+.img-thumbnail{
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.resume-par{
+    font-size: 125%;
+    text-align: center;
+    font-family: Eurostile;
+}
+
+.portfolio-info{
+    font-size: 125%;
+    text-align: center;
+    font-family: Eurostile;
+}
+
+/*p{*/
+    /*font-size: 125%;*/
+    /*text-align: center;*/
+    /*font-family: Eurostile;*/
+
+/*}*/
+
+footer {
+    margin-top: 10%;
+}
+
+.myname{
+    font-size: 125%;
+    text-align: center;
+    font-family: Eurostile;
+
+}
+/*========end of my own css========*/

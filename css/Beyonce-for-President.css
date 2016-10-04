@@ -1,0 +1,145 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: lavenderblush;
+    font-family: Georgia, Serif;
+}
+h1{
+    text-align: center;
+}
+header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+nav{
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 15px;
+    padding: 0;
+    text-align: center;
+    font-size: larger;
+}
+
+li{
+    display: inline;
+    font-stretch: expanded;
+    font-size: x-large;
+    padding-right: 50px;
+}
+
+
+#emails{
+    background-image: url(../img/beyonce.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+button{
+    color: black;
+    font-weight: 200;
+    font-color: black;
+    background-color: lavenderblush;
+}
+
+.info{
+    text-align: center;
+    color: yellow;
+    margin-bottom: 30px;
+    padding: 7%;
+}
+
+#email{
+    background-color: lavenderblush;
+}
+#Zipcode{
+     background-color: lavenderblush;
+}
+
+#dropdown{
+    background-color: lavenderblush;
+}
+#par{
+    float: left;
+    margin: 50px;
+    margin-left: 15%;
+    margin-top: 0%;
+}
+
+.col-1{
+    width: 40%;
+}
+
+.col-2{
+    width: 50%;
+}
+
+h2{
+    color: navy;
+    font-weight: 700;
+}
+h3{
+    font-size: xx-large;
+    text-shadow: 1px 1px 10px cornflowerblue;
+}
+h4{
+    color: navy;
+    font-weight: 900;
+}
+
+p {
+    color: cornflowerblue;
+    font-weight: 200;
+}
+
+#newscol{
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    margin-right: 10%;
+}
+
+footer{
+    border: solid navy;
+    color: darkmagenta;
+    font-size: x-large;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    clear: both;
+    margin-right: 14.9%;
+    margin-left: 14.9%;
+}
+
+a:visited{color: purple}
+a:hover{color:yellow}
+a:active{color:darkred}
+
+/*!*!*!*!* Smartphones (portrait and landscape) --- *!*!*!*!*/
+@media (max-width : 750px){
+    .col-1 {width: 50%;
+    text-align: justify;
+    font-size: smaller;}
+    .col-2 {width: 15%;
+    text-align: justify;
+    font-size: smaller;}
+    input, select, button, li{
+        display: block;
+    }
+    html, main, body {background-color: aqua;
+    margin: 0.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    /*!* For desktop: *!*/
+    .col-1 {width: 40%;}
+    .col-2 {width: 60%;}
+}
