@@ -69,6 +69,13 @@ footer {
     font-size: 125%;
     text-align: center;
     font-family: Eurostile;
+}
 
+.jumbotron {
+    padding: 1%;
+}
+
+.col-md-12 {
+    display: inline;
 }
 /*========end of my own css========*/

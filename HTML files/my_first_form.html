@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <title>My First HTML Form</title>
     <link rel="stylesheet" href="/css/selectors.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-    <form method="GET" action="http://requestb.in/1bgjssh1"> <!--don't forget to put an action if you want it
-                                                                 to do it-->
-        <p>
-            <h2>Testing</h2>
+<main>
+    <form method="GET" action="http://requestb.in/1bgjssh1">
+        <!--don't forget to put an action if you want it to do it-->
+        <h2>Testing</h2>
             <label for="username">Username</label>
-            <input id="username" name="username" type="text"> <!--required means that
+        <input id="username" name="username" type="text"> <!--required means that
             have to submit something here before you submit the form and autofocus means that the browser will
             make the box highlighted or able for the user to focus in on the form -->
-        </p>
         <p>
             <label for="password">Password</label>
-            <input id="password" name="password" type="password" >
+            <input id="password" name="password" type="password">
         </p>
         <p>
             <label for="password">Company</label>
-            <input id="password" name="Company" type="password" placeholder="Where do you work?">
+            <input id="#" name="Company" type="password" placeholder="Where do you work?">
         </p>
         <p>
             <input type="submit">
         </p>
-        <textarea id="email_body" name="email_body" rows="5" cols="40">Content Here</textarea>
+        <textarea class="form-control" rows="3" id="email_body" name="email_body">Content Here</textarea>
     </form>
-
-
     <h2>Compose an email</h2>
     <form class="form" action="http://requestb.in/1bgjssh1" method="post">
         <p>
@@ -41,10 +40,9 @@
             <input type="text" name="from" id="To" placeholder="enter their email" required>
         </p>
     </form>
+
     <input type="checkbox" id="mailing_list" name="mailing_list" value="yes" checked>
-
     <label for="mailing_list">Sign me up for the mailing list!</label>
-
 
     <p>What is the capital of Texas?</p>
     <label>
@@ -92,7 +90,7 @@
         <select id="transmission" name="transmission">
 
             <option value="1" selected>Yes</option>
-            <option value="2" >No</option>
+            <option value="2">No</option>
         </select>
         <input type="submit"> <!--the input usually goes outside the <select> tabs-->
     </form>
@@ -118,5 +116,10 @@
         </select>
         <input type="submit">
     </form>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</main>
 </body>
+</html>
 
