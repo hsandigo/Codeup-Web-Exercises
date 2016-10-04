@@ -25,7 +25,6 @@ h1, h3{
     font-family: Eurostile;
 }
 
-/*try to fix the right edge of this*/
 .container{
     background-color: rgba(241, 241, 201, 0.78);
 }
@@ -35,17 +34,21 @@ h1, h3{
     text-align: center;
     font-family: Eurostile;
     max-width: 50%;
+    margin-top: 7%;
 }
 
 .img-thumbnail{
     max-height: 350px;
     max-width: 350px;
+    margin-left: 50%;
+    margin-top: 2%;
 }
 
 .resume-par{
     font-size: 125%;
     text-align: center;
     font-family: Eurostile;
+    margin-top: 10%;
 }
 
 .portfolio-info{
@@ -54,28 +57,33 @@ h1, h3{
     font-family: Eurostile;
 }
 
-/*p{*/
-    /*font-size: 125%;*/
-    /*text-align: center;*/
-    /*font-family: Eurostile;*/
+/*p{
+    font-size: 125%;
+    text-align: center;
+    font-family: Eurostile;
 
-/*}*/
+}*/
 
-footer {
-    margin-top: 10%;
+.bottom-content {
+    align-content: center;
+    margin-top: 40%;
 }
 
 .myname{
     font-size: 125%;
     text-align: center;
     font-family: Eurostile;
+    /*margin-top: 30%;*/
+}
+
+footer {
+    margin-top: 5%;
+    /*align-content: center;*/
 }
 
 .jumbotron {
     padding: 1%;
-}
-
-.col-md-12 {
-    display: inline;
+    margin-bottom: 1%;
+    background-color: transparent;
 }
 /*========end of my own css========*/
