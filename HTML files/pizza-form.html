@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PIZZA PIZZA PIZZA</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/PIZZA%20PIZZA%20PIZZA.css"> <!--THIS IS WHERE YOU WOULD PUT YOUR OWN CSS FILE-->
+</head>
+<body>
+<div class="jumbotron">
+    <h1>PIZZA IS LIFE</h1>
+    <p>This is a simple and basic form because I only like pizza with triple meat, spinach, and bell pepper.</p>
+    <!--<p><a class="btn btn-primary btn-lg">Learn more</a></p>-->
+</div>
+<form action="http://requestb.in/1b1s9ji1" method="get" class="form-horizontal">
+    <!--https://requestb.in/1b1s9ji1?inspect-->
+    <fieldset>
+        <!--<legend>PIZZA PIZZA PIZZA</legend>-->
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+            <div class="col-lg-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Keep Me Signed In
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Crust Options</label>
+            <div class="col-lg-10">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> <!--checked="">-->
+                        Hand-tossed
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Gluten-free
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label type="checkbox" class="col-lg-2 control-label">Select Toppings</label>
+            <div class="col-lg-10">
+                <label><input type="checkbox" id="option1" name="top[]" value="Pepperoni">Pepperoni</label>
+                <label><input type="checkbox" id="option2" name="top[]" value="Italian Sausage">Italian Sausage</label>
+                <label><input type="checkbox" id="option3" name="top[]" value="Bacon">Bacon</label>
+                <label><input type="checkbox" id="option4" name="top[]" value="Spinach">Spinach</label>
+                <label><input type="checkbox" id="option5" name="top[]" value="Bell Peppe">Bell Pepper</label>
+                <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Comments</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" rows="3" id="textArea"></textarea>
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+                <!--<select multiple="" class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>-->
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+<div class="progress progress-striped active">
+    <div class="progress-bar" style="width: 45%"></div>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>

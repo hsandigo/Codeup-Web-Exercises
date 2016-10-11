@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ForLoops</title>
+</head>
+<body>
+<script>
+
+    for(var n=1; n <= 10; n++){
+        console.log(n);
+    }
+
+ /*  this is what we want it to do
+    console.log(1);
+    console.log(22);
+    console.log(333);
+    console.log(4444);
+    console.log(55555);
+    console.log(666666);
+    console.log(7777777);
+    console.log(88888888);
+    console.log(999999999);
+    console.log(0000000000);
+  */
+
+    for (var i = 1; i <=10; i++){
+        var string = i.toString();
+//        var lastCharacter = string.substring(string.length - 1); this will give you the same as the line below
+        var lastCharacter = string[string.length - 1]; //these two lines give you the last character of 10
+        console.log(lastCharacter.repeat(i)); //this allows you to only get the last character every time
+    }
+
+
+////////////new problem
+/*-- this is hard wired to 7 x 1, etc.*/
+
+var random = 7;
+   for (var i = 1; i <= 10; i = i + 1){
+        console.log(random + "x" + i + "=" +(random*i))
+    }
+
+////// new problem
+
+/*this will get you get you a random number every time you refresh*/
+    for (var i = 1; i <= 10; i = i + 1){
+        var random = Math.floor(Math.random() *10) +1;
+        console.log(random + "x" + i + "=" + (random*i));
+    }
+
+
+//////////new problem
+/**/
+   for (var i = 1; i <= 10; i++)
+       var rand = Math.ceil(Math.random() * 200-20) + 20;
+        if(rand % 2 == 0) {
+            console.log(rand + "is even")
+        }else{
+            console.log (rand + "is odd");
+   }
+
+///////new problem
+
+    for (var i = 100; i >= 5; i-=5) {
+        console.log(i);
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body, html {
+    /*background-image: url("../img/pizza.jpeg");*/
+    background-position: center;
+    background-size: 100%;
+    background-color: transparent;
+    font-family: "Bell MT";
+    color: #0f0f0f;
+    font-weight: 300px;
+}
+.form-control{
+    margin-top: 3%;
+}

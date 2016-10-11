@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While</title>
+</head>
+<body>
+<script>
+    var i = 1; //counter
+
+    //are we done yet?
+    while (/*condition, returns true*/ i < 21){//start of a block
+        console.log(i);
+        i+= 2; //increment//nope
+     }//end of a block
+
+    console.log("We're done!");
+
+
+
+
+//new problem
+
+    var targetAmount = 100;
+    var amountSaved = 0; //accumulator
+
+    while (amountSaved < targetAmount){
+        amountSaved += Math.floor(Math.random()*10) +1;
+    }
+
+    console.log("I saved" +amountSaved);
+</script>
+</body>
+</html>

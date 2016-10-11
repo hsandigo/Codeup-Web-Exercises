@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break and Continue exercise</title>
+</head>
+<body>
+    <script>
+
+        console.log ("Random odd number to skip is: 27");
+        do{
+        var random = Math.floor((Math.random()*50)+1);
+        }
+        while (random % 2 == 0);
+
+        for (var i = 1; i < 50; i++) {
+        if (i == random){
+            console.log ("Skipping " + i + " becuase it's my favorite number");
+            continue;
+            }
+
+        if (random % 2 != 0 ){
+        console.log("Here is an odd number: " + i);
+        }
+        }
+
+
+
+        //new problem
+
+        function getRandomOddNumber (start, end) {
+            do{
+                var rand = Math.floor(Math.random() * )
+            }
+        }
+    </script>
+</body>
+</html>
