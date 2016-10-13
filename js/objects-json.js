@@ -66,23 +66,20 @@ var books = [
             "lastName": "Rowling"
         }
     }
-];
-books.forEach(function(book, index){
-    console.log("Book # is " + (index + 1));
-    console.log("Title: " + book.title);
-    console.log("Written by " + book.author.firstName + " "+ book.author.lastName);
-    console.log("-----");
-});
+    ];
+    books.forEach(function(book, index){
+        console.log("Book # is " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Written by " + book.author.firstName + " "+ book.author.lastName);
+        console.log("-----");
+    });
 
-// log out the books array
-//var book = books[0]; this is just to see
+    // log out the books array
+    //var book = books[0]; this is just to see it simply
 
-//
-//    // todo:
-//    // Loop through the array of books using .forEach and print out the specified information about each one.
-//    // start loop here//
-//    console.log("The title is " + books.title);
-//    console.log("It is written by " + books.author.firstName + books.author.lastName);
-//    console.log("---");
-//
-//    // end loop here
+    // Loop through the array of books using .forEach and print out the specified information about each one.
+    // start loop here//
+    // console.log("The title is " + books.title);
+    // console.log("It is written by " + books.author.firstName + books.author.lastName);
+    // console.log("---");
+    // end loop here
