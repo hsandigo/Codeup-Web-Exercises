@@ -1,37 +1,37 @@
 /*Created by humbertosandigo on 10/12/16.*/
 
 /*
-var arrayOfNumbers = [1, 2, 3, 4, 5];
-for (var i = 0; i < arrayOfNumbers.length; i++); {
-    console.log ("The element at index " + "is " + arrayOfNumbers[i]);
-}
+ var arrayOfNumbers = [1, 2, 3, 4, 5];
+ for (var i = 0; i < arrayOfNumbers.length; i++); {
+ console.log ("The element at index " + "is " + arrayOfNumbers[i]);
+ }
 
-arrayOfNumbers.forEach(function (element, index, array){
-    console.log("The element at index " + index + " is " + element);
-});
+ arrayOfNumbers.forEach(function (element, index, array){
+ console.log("The element at index " + index + " is " + element);
+ });
 
-newArray = [];
-[1, 2, 3, 4, 5].forEach(function(element, index, array){
-    newArray.push(element + 1);
-});
+ newArray = [];
+ [1, 2, 3, 4, 5].forEach(function(element, index, array){
+ newArray.push(element + 1);
+ });
 
 
-arrayOfEvens = [];
-[1, 2, 3, 4, 5].forEach(function (element, index, array) {
-   if(isEven(element)){
-       arrayOfEvens.push(element);
-}
-});
+ arrayOfEvens = [];
+ [1, 2, 3, 4, 5].forEach(function (element, index, array) {
+ if(isEven(element)){
+ arrayOfEvens.push(element);
+ }
+ });
 
-function isEven(number){
-     return number %2 == 0;
-}
+ function isEven(number){
+ return number %2 == 0;
+ }
 
-var sum = 0;
-[1, 2, 3, 4, 5].forEach(function(element, index, array){
-    sum += element;
-});
-*/
+ var sum = 0;
+ [1, 2, 3, 4, 5].forEach(function(element, index, array){
+ sum += element;
+ });
+ */
 
 
 
@@ -54,19 +54,19 @@ names.forEach(function upperCaseFirstLetterInEachString(array) {
 });
 
 /* Ryan's Solution
-var names = ['john', 'paul', 'ringo', 'george', 'yoko'];
-function capitalizedFirstLetterOfEachString(arrayOfStrings){
-    arrayOfStrings.forEach(function (string, index) {
-        var firstLetterCapitalized= string.[0].toUpperCase();
-        var restOfString= string.substring(1, string.length);
-        var fullString= firstLetterCapitalized + restOfString;
-        arrayOfStrings[index] = fullString
-    });
-    return arrayOfStrings;
-}
-   names = capitalizedFirstLetterOfEachString(names);
-   console.log(names);
-*/
+ var names = ['john', 'paul', 'ringo', 'george', 'yoko'];
+ function capitalizedFirstLetterOfEachString(arrayOfStrings){
+ arrayOfStrings.forEach(function (string, index) {
+ var firstLetterCapitalized= string.[0].toUpperCase();
+ var restOfString= string.substring(1, string.length);
+ var fullString= firstLetterCapitalized + restOfString;
+ arrayOfStrings[index] = fullString
+ });
+ return arrayOfStrings;
+ }
+ names = capitalizedFirstLetterOfEachString(names);
+ console.log(names);
+ */
 
 //Exercise 2
 //Write a function that takes an array of numbers 1-10
@@ -74,15 +74,15 @@ function capitalizedFirstLetterOfEachString(arrayOfStrings){
 //is this a type of map, filter, or reduce usage of the forEach
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function multiplyAllTheNubers (arrayOfNumbers){
+function multiplyAllTheNumbers(arrayOfNumbers) {
     var product = 1;
 
-    arrayOfNumbers.forEach(function(number) {
+    arrayOfNumbers.forEach(function (number) {
         product *= number;
     });
     return product;
 }
-console.log(multiplyAllTheNubers(numbers));
+console.log(multiplyAllTheNumbers(numbers));
 
 
 //Exercise 3
@@ -90,19 +90,14 @@ console.log(multiplyAllTheNubers(numbers));
 //for an unordered list with an <li> for each person on your names array
 //is this a type of map, filter, or reduce usage of the forEach
 
-function listify(arrayOfStrings){
+function listify(arrayOfStrings) {
     var htmlContent = "";
     htmlContent += "<ul>";
 
-    arrayOfStrings.forEach(function(string){
-        htmlContent += "<li>" +string + "</li>";
+    arrayOfStrings.forEach(function (string) {
+        htmlContent += "<li>" + string + "</li>";
     });
 
     htmlContent += "</ul>";
     return htmlContent;
 }
-
-
-
-
-

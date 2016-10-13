@@ -5,15 +5,17 @@
     "use strict";
 
     // TODO: Create an array holding the names of the eight planets in our solar system in order, starting closest to the sun.
-    var planets = [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune];
+    var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
     // function for logging the planets array
-    function logPlanets() {
-        console.log("Here is the list of planets:");
-        console.log(planets);
-        console.log("---- ---- ---- ----");
-    }
-
+    // function logPlanets(names) {
+    //     var planetNames = [];
+    //     names.forEach(function(name)){
+    //     }
+    //     console.log("Here is the list of planets:");
+    //     console.log(planets);
+    //     console.log("---- ---- ---- ----");
+    // }
     logPlanets();
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
@@ -62,7 +64,8 @@
     // TODO: Read the console.log() statement above. Write code to perform the step it describes.
         planets.sort();
         logPlanets();
-})();
+});
+
 
 
 
