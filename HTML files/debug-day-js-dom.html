@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programming books books</title>
+</head>
+<body>
+<h1>See your friend's books</h1>
+<form>
+    <label for="friend">Choose</label>
+    <select id="friend" name="friend" class="friend">
+        <option value="friend">Friend</option>
+    </select>
+    <input type="button" value="Search">
+</form>
+<div id="books"></div>
+
+<script>
+    var friends = [
+        {name: 'Oliver', books: ['Ansible for DevOps', 'Servers for hackers']},
+        {name: 'Barry', books: ['Working effectively with unit tests', '50 quick ideas for your tests']},
+        {name: 'Jessica', books: ['Understanding the 4 rules of simple design', 'Principles of package design']},
+        {name: 'Clark', books: ['Selling test driven projects']}
+    ];
+    var friend = document.getElementById('friend');
+    var options = "";
+    friends.forEach(function (friend, i) {
+        options += '<option value="' + i + '">' + friend.name + '</option>';
+    });
+    friend.innerHTML = options; <!--MAKE SURE YOU SPELL THINGS RIGHT. Spelling HMTL will give you a silent error-->
+</script>
+</body>
+</html>
+<!--First step is to console log just to see what the errors are
+next, you see that you're getting a collection and not the element
+so, you change the document.getElementsByClassName to document.getElementById
+but, then your select is empty
+then you console.log your options and see that you're only logging the last name
+SO, you realize that you need a += for your options
+then you need to initialize your options variable to and empty string-->
+
+<!--take a look at the values
+then look for the sources of errors-->

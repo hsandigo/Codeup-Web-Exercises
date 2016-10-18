@@ -1,0 +1,33 @@
+#input-blanks{
+    display: inline;
+}
+
+#left{
+    max-width: 4%;
+}
+#middle{
+     max-width: 3%;
+}
+
+#right{
+     max-width: 4%;
+}
+
+#zero{
+     min-width: 6.3%;
+}
+#clear{
+    min-width: 9.5%;
+}
+.operator{
+    background-color: #549ede;
+    width:3%;
+    height:3%;
+}
+
+.number{
+    background-color: darkgrey;
+    width: 3%;
+    height: 3%;
+
+}
