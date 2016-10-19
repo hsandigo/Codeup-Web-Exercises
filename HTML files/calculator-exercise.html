@@ -3,80 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculate</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/calculator-exercise.css"> <!--THIS IS WHERE YOU WOULD PUT YOUR OWN CSS FILE-->
 </head>
 <body>
-<!--<h1>Are you smarter than a calculator?</h1>-->
+<!--<h1>The Salvador Dalí of Calculators</h1>-->
+<main>
+    <div class="container-fluid">
+        <div>
+            <label for = "left"></label>
+            <input type = "text" id = "left">
 
-<!--<button type="button" class="btn btn-default btn-lg active">Button</button>-->
-<div class="rowOne" id = "input-blanks">
-    <div class="col-md-4">
-        <label for = "left"></label>
-        <input type = "text" id = left>
+            <label for = "middle"></label>
+            <input type = "text" id = "middle">
 
-        <label for = "middle"></label>
-        <input type = "text" id = middle>
+            <label for = "right"></label>
+            <input type = "text" id = "right">
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class = "row" id = "second">
+            <!--<div class = "col-md-6">-->
+                <div class = "btn-group">
+                    <a class = "btn btn-warning" id = "clear">Clear</a>
+                </div>
+                <a class = "btn btn-info" id = "divide">/</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class = "row" id = "third">
+            <!--<div class = "col-md-3">-->
+                <a class = "btn btn-default" id = "seven">7</a>
+                <a class = "btn btn-default" id = "eight">8</a>
+                <a class = "btn btn-default" id = "nine">9</a>
+                <a class = "btn btn-info" id = "multiply">*</a>
+            </div>
+            <!--<div class = "col-md-3">-->
+                <a class = "btn btn-default" id = "four">4</a>
+                <a class = "btn btn-default" id = "five">5</a>
+                <a class = "btn btn-default" id = "six">6</a>
+                <a class = "btn btn-info" id ="minus">-</a>
+            </div>
+            <!--<div class = "col-md-3">-->
+                <a class = "btn btn-default" id = "one">1</a>
+                <a class = "btn btn-default" id = "two">2</a>
+                <a class = "btn btn-default" id = "three">3</a>
+                <a class = "btn btn-info" id = "plus">+</a>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
 
-        <label for = "right"></label>
-        <input type = "text" id = right>
-</div>
-
-<div class="row">
-    <div class = "col-md-6">
-        <button id = "clear" class = "number">Clear</button>
-        <button id = "divide" class = "operator">/</button>
+    <div class = "row" id = "fourth">
+        <!--<div class = "col-md-4">-->
+            <a class = "btn btn-default" id = "zero">0</a>
+            <a class = "btn btn-info" id = "decimal">.</a>
+            <div class = "btn-group">
+                <a class = "btn btn-success" id = "equal">=</a>
+            </div>
+        </div>
     </div>
-    <div class = "col-md-3">
-        <button id = "seven" class = "number">7</button>
-        <button id = "eight" class = "number">8</button>
-        <button id = "nine" class = "number">9</button>
-        <button id = "multiply" class = "operator">*</button>
-    </div>
-    <div class = "col-md-3">
-        <button id = "four" class = "number">4</button>
-        <button id = "five" class = "number">5</button>
-        <button id = "six" class = "number">6</button>
-        <button id = "minus" class = "operator">-</button>
-    </div>
-    <div class = "col-md-3">
-        <button id = "one" class = "number">1</button>
-        <button id = "two" class = "number">2</button>
-        <button id = "three" class = "number">3</button>
-        <button id = "plus" class = "operator">+</button>
-    </div>
-    <div class = "col-md-4">
-        <button id = "zero" class = "number">0</button>
-        <button id = "period" class = "number">.</button>
-        <button id = "equal" class = "operator">=</button>
-    </div>
-</div>
+</main>
 
 <script>
-    document.getElementById("one")
-        .addEventListener("click", function (){
-                var inputOne = parseInt(prompt("Enter your grade"));
-                while (isNaN(inputOne)|| (inputOne < 0 || inputOne > 100)){
+//variables for NUMBERS and OPERATORS
+var leftBox = document.getElementById("left");
+var middleBox = document.getElementById("middle");
+var rightBox = document.getElementById("right");
 
-                    inputOne = parseInt(prompt("Enter a number between 0 and 100"));
-                    console.log(inputOne);
-                    console.log(typeof inputOne); //you want to console.log the data and the data type of what your code is doing
-                }
-                return inputOne;
-            });
-    document.getElementById("multiply")
-        .addEventListener("click", function(){
-        var leftInput = document.getElementById("leftInput").value;
-        var rightInput = document.getElementById("rightInput").value;
-        var result = leftInput * rightInput;
-            //clear out all the inputs
-            //set the .value or .innerHTML of the input to hold the new result
-        });
+var zeroButton = document.getElementById("zero");
+var oneButton = document.getElementById("one");
+var twoButton = document.getElementById("two");
+var threeButton = document.getElementById("three");
+var fourButton = document.getElementById("four");
+var fiveButton = document.getElementById("five");
+var sixButton = document.getElementById("six");
+var sevenButton = document.getElementById("seven");
+var eightButton = document.getElementById("eight");
+var nineButton = document.getElementById("nine");
 
+var decimalButton = document.getElementById("decimal");
+var divideButton = document.getElementById("divide");
+var multiplyButton = document.getElementById("multiply");
+var minusButton = document.getElementById("minus");
+var plusButton = document.getElementById("plus");
+var equalButton = document.getElementById("equal");
+var clearButton = document.getElementById("clear");
+
+//functions for NUMBERS and OPERATORS
+function zeroButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "0";
+    }else{
+        document.getElementById("right").value += "0";
+    }
+}
+function oneButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "1";
+    }else{
+        document.getElementById("right").value += "1";
+    }
+}
+function twoButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "12";
+    }else{
+        document.getElementById("right").value += "12";
+    }
+}
+function threeButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "3";
+    }else{
+        document.getElementById("right").value += "3";
+    }
+}
+function fourButtonClicked () {
+    event.preventDefault();
+    if (middleBox == ""){
+        document.getElementById("left").value += "4";
+    }else{
+        document.getElementById("right").value += "4";
+    }
+}
+function fiveButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "5";
+    }else{
+        document.getElementById("right").value += "5";
+    }
+}
+function sixButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "6";
+    }else{
+        document.getElementById("right").value += "6";
+    }
+}
+function sevenButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "7";
+    }else{
+        document.getElementById("right").value += "7";
+    }
+}
+function eightButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "8";
+    }else{
+        document.getElementById("right").value += "8";
+    }
+}
+function nineButtonClicked () {
+    event.preventDefault();
+    if (middleBox.value == ""){
+        document.getElementById("left").value += "9";
+    }else{
+        document.getElementById("right").value += "9";
+    }
+}
+
+//STILL NEED TO FIGURE OUT HOW TO BE ABLE TO PUT THIS WITH ANY NUMBER IN EITHER RIGHT/LEFT BOX
+//function decimalButtonClicked () {
+//    event.preventDefault();
+//    document.getElementById("left").innerHTML += ".";
+//    left.value = ".";
+//    right.value = ".";
+//}
+
+function divideButtonClicked () {
+    event.preventDefault();
+    document.getElementById("middle").value = "/";
+}
+function multiplyButtonClicked () {
+    event.preventDefault();
+    document.getElementById("middle").value = "*";
+}
+function minusButtonClicked () {
+    event.preventDefault();
+    document.getElementById("middle").value = "-";
+}
+function plusButtonClicked () {
+    event.preventDefault();
+    document.getElementById("middle").value = "+";
+}
+
+//STILL NEED TO FIGURE OUT = FUNCTION
+function equalButtonClicked () {
+    event.preventDefault();
+    if(middleBox.value == "/"){
+        leftBox.value = leftBox.value / rightBox.value
+    }else if(middleBox.value == "*" ){
+        leftBox.value = leftBox.value * rightBox.value
+    }else if(middleBox.value == "-" ) {
+        leftBox.value = leftBox.value - rightBox.value
+    }else if (middleBox.value == "+"){
+        leftBox.value = parseInt(leftBox.value) + parseInt(rightBox.value);
+
+//    }function clearButtonClicked() {
+//        event.preventDefault();
+//        leftBox.value = "";
+//        middleBox.value = "";
+//        rightBox.value = "";
+    }
+    document.getElementById("").value = "=";
+}
+
+function clearButtonClicked () {
+    event.preventDefault();
+    leftBox.value = "";
+    middleBox.value = "";
+    rightBox.value = "";
+}
+
+//eventListeners for BUTTS, OPERATORS
+zeroButton.addEventListener("click", zeroButtonClicked);
+oneButton.addEventListener("click", oneButtonClicked);
+twoButton.addEventListener("click", twoButtonClicked);
+threeButton.addEventListener("click", threeButtonClicked);
+fourButton.addEventListener("click", fourButtonClicked);
+fiveButton.addEventListener("click", fiveButtonClicked);
+sixButton.addEventListener("click", sixButtonClicked);
+sevenButton.addEventListener("click", sevenButtonClicked);
+eightButton.addEventListener("click", eightButtonClicked);
+nineButton.addEventListener("click", nineButtonClicked);
+
+//decimalButton.addEventListener("click", decimalButtonClicked); doing this later
+divideButton.addEventListener("click", divideButtonClicked);
+multiplyButton.addEventListener("click", multiplyButtonClicked);
+minusButton.addEventListener("click", minusButtonClicked);
+plusButton.addEventListener("click", plusButtonClicked);
+equalButton.addEventListener("click", equalButtonClicked);
+clearButton.addEventListener("click", clearButtonClicked);
+
+
+
+
+//THINGS THAT DIDN'T WORK
+/*oneButton.addEventListener("click", function(){
+ //        document.getElementById("left").innerText += "1";
+ left.value = "1";
+ });*/
+
+//document.getElementById("divide")
+//    .addEventListener("click", function(){
+//        document.getElementById("middle").value += "/";
+//        });
+//document.getElementById("multiply")
+//    .addEventListener("click", function(){
+//        document.getElementById("middle").value += "*";
+//        });
+
+//functions for NUMBERS and OPERATORS
+//function oneButtonClicked (){
+//    event.preventDefault();
+//    if (left.value += "1");
+//
+
+//    if (left.value += "1") {
+//    } else {
+//        right.value += "1";
+//    }
+//}
+
+//var leftBox = document.getElementById("left");
+//var oneButton = document.getElementById("one");
+//function click () {
+//    event.preventDefault();
+//    left.value += "1";
+//}
+
+//document.getElementById("two")
+//    .addEventListener("click", function(){
+//        document.getElementById("left").value += "2";
+//    });
+//document.getElementById("three")
+//    .addEventListener("click", function(){
+//        document.getElementById("left").value += "3";
+//    });
+
+//document.getElementById("divide")
+//        .addEventListener("click", function(){
+//            var leftBox = document.getElementById("leftBox").value;
+//            var rightBox = document.getElementById("rightBox").value;
+//            var result = leftInput / rightInput;
+//            //clear out all the inputs
+//            //set the .value or .innerHTML of the input to hold the new result
+//        });
+//document.getElementById("multiply")
+//        .addEventListener("click", function(){
+//            var leftBox = document.getElementById("leftBox").value;
+//            var rightBox = document.getElementById("rightBox").value;
+//            var result = leftInput * rightInput;
+//            //clear out all the inputs
+//            //set the .value or .innerHTML of the input to hold the new result
+//        });
 
 </script>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
 </body>
 </html>
