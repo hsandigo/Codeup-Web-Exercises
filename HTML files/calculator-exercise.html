@@ -90,7 +90,9 @@ var plusButton = document.getElementById("plus");
 var equalButton = document.getElementById("equal");
 var clearButton = document.getElementById("clear");
 
-//functions for NUMBERS and OPERATORS
+
+
+//functions for NUMBERS
 function zeroButtonClicked () {
     event.preventDefault();
     if (middleBox.value == ""){
@@ -110,9 +112,9 @@ function oneButtonClicked () {
 function twoButtonClicked () {
     event.preventDefault();
     if (middleBox.value == ""){
-        document.getElementById("left").value += "12";
+        document.getElementById("left").value += "2";
     }else{
-        document.getElementById("right").value += "12";
+        document.getElementById("right").value += "2";
     }
 }
 function threeButtonClicked () {
@@ -172,14 +174,16 @@ function nineButtonClicked () {
     }
 }
 
-//STILL NEED TO FIGURE OUT HOW TO BE ABLE TO PUT THIS WITH ANY NUMBER IN EITHER RIGHT/LEFT BOX
-//function decimalButtonClicked () {
-//    event.preventDefault();
-//    document.getElementById("left").innerHTML += ".";
-//    left.value = ".";
-//    right.value = ".";
-//}
 
+//functions for OPERATORS
+function decimalButtonClicked () {
+    event.preventDefault();
+    if (leftBox.value == ""){
+        document.getElementById("left").value += ".";
+    }else{
+        document.getElementById("left").value += ".";
+    }
+}
 function divideButtonClicked () {
     event.preventDefault();
     document.getElementById("middle").value = "/";
@@ -197,24 +201,19 @@ function plusButtonClicked () {
     document.getElementById("middle").value = "+";
 }
 
-//STILL NEED TO FIGURE OUT = FUNCTION
 function equalButtonClicked () {
     event.preventDefault();
-    if(middleBox.value == "/"){
+    if (middleBox.value == "/") {
         leftBox.value = leftBox.value / rightBox.value
-    }else if(middleBox.value == "*" ){
+    } else if (middleBox.value == "*") {
         leftBox.value = leftBox.value * rightBox.value
-    }else if(middleBox.value == "-" ) {
+    } else if (middleBox.value == "-") {
         leftBox.value = leftBox.value - rightBox.value
-    }else if (middleBox.value == "+"){
+    } else if (middleBox.value == "+") {
         leftBox.value = parseInt(leftBox.value) + parseInt(rightBox.value);
-
-//    }function clearButtonClicked() {
-//        event.preventDefault();
-//        leftBox.value = "";
-//        middleBox.value = "";
-//        rightBox.value = "";
     }
+    middleBox.value = "";
+    rightBox.value = "";
     document.getElementById("").value = "=";
 }
 
@@ -224,6 +223,7 @@ function clearButtonClicked () {
     middleBox.value = "";
     rightBox.value = "";
 }
+
 
 //eventListeners for BUTTS, OPERATORS
 zeroButton.addEventListener("click", zeroButtonClicked);
@@ -237,15 +237,13 @@ sevenButton.addEventListener("click", sevenButtonClicked);
 eightButton.addEventListener("click", eightButtonClicked);
 nineButton.addEventListener("click", nineButtonClicked);
 
-//decimalButton.addEventListener("click", decimalButtonClicked); doing this later
+decimalButton.addEventListener("click", decimalButtonClicked);
 divideButton.addEventListener("click", divideButtonClicked);
 multiplyButton.addEventListener("click", multiplyButtonClicked);
 minusButton.addEventListener("click", minusButtonClicked);
 plusButton.addEventListener("click", plusButtonClicked);
 equalButton.addEventListener("click", equalButtonClicked);
 clearButton.addEventListener("click", clearButtonClicked);
-
-
 
 
 //THINGS THAT DIDN'T WORK

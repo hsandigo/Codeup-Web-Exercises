@@ -9,7 +9,7 @@ main{
 }
 
 #left, #middle, #right{
-    max-width: 10%;
+    max-width: 7%;
 }
 
 #second{
@@ -17,4 +17,8 @@ main{
 }
 #third{
     margin-left: 2%;
+}
+
+.btn-success{
+    min-width: 25%;
 }
