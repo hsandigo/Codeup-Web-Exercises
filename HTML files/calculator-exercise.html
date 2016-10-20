@@ -178,10 +178,14 @@ function nineButtonClicked () {
 //functions for OPERATORS
 function decimalButtonClicked () {
     event.preventDefault();
-    if (leftBox.value == ""){
-        document.getElementById("left").value += ".";
+    if (middleBox.value == ""){
+        if (document.getElementById("left").value.indexOf(".") == -1) { // there's no dot (it returns a -1 because
+            document.getElementById("left").value += ".";
+        }
     }else{
-        document.getElementById("left").value += ".";
+        if (document.getElementById("right").value.indexOf(".") == -1) { // there's no dot
+            document.getElementById("right").value += ".";
+        }
     }
 }
 function divideButtonClicked () {
@@ -210,7 +214,7 @@ function equalButtonClicked () {
     } else if (middleBox.value == "-") {
         leftBox.value = leftBox.value - rightBox.value
     } else if (middleBox.value == "+") {
-        leftBox.value = parseInt(leftBox.value) + parseInt(rightBox.value);
+        leftBox.value = parseFloat(leftBox.value) + parseFloat(rightBox.value);
     }
     middleBox.value = "";
     rightBox.value = "";
