@@ -1,8 +1,15 @@
+html{
+    background-image: url("../img/moon-phases-resized-1.jpeg");
+    ;
+}
+body{
+    background-color: transparent;
+    color: whitesmoke;
+}
 h1{
     font-family: "Abadi MT Condensed Light";
     font-size: xx-large;
 }
-
 main{
     margin-top: 5%;
     margin-left: 10%;
@@ -10,6 +17,11 @@ main{
 
 #left, #middle, #right{
     max-width: 7%;
+    background-color: transparent;
+}
+
+#input-container{
+    margin-left: 6%;
 }
 
 #second{
@@ -18,7 +30,6 @@ main{
 #third{
     margin-left: 2%;
 }
-
 .btn-success{
     min-width: 25%;
 }

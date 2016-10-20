@@ -1,0 +1,22 @@
+nav{display: inline;
+}
+
+body{
+    margin: 10p%;
+    padding: 3%;
+    font-family: 'Trebuchet MS',verdana;
+    background-color: papayawhip;
+}
+
+.jumbotron{
+    background-color: rgba(80, 133, 193, 0.61);
+}
+
+.img-circle{
+    max-height: 1400px;
+    max-width: 1400px;
+}
+
+.italic{
+    font-style: italic;
+}

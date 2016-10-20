@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>constructors</title>
+</head>
+<body>
+<!--this is the way that javascript allows you to use the same function for objects
+ of the same type without having to rewrite things over and over -->
+<script>
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullName = function () {
+            return this.firstName + " " + this.lastName;
+        };
+        return this;
+    }
+
+    var person = new Person("Ryan", "Orsinger");
+    var person2 = new Person("Cameron", "Holland");
+    var person3 = new Person("Fernando", "Mendoza");
+
+    //    var person = {
+    //        firstName: "Ryan",
+    //        lastName: "Orsinger",
+    //        fullName: function () {
+    //            return this.firstName + " " + this.lastName;
+    //        }
+    //    };
+
+    console.log(person.fullName());
+    console.log(person2.fullName());
+    console.log(person3.fullName());
+</script>
+</body>
+</html>
