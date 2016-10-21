@@ -42,6 +42,7 @@
 
 <p>Baby, it's you. <span>You're the one I love.</span>You're the one I need.</p>
 
+<button id="submit">submit</button>
 
 <script src="https://code.jquery.com/jquery-3.1.1.js"
         integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
@@ -50,13 +51,27 @@
 <script>
 "use strict";
 
+$("h1").click(function (){
+    $(this).css("background-color", "yellow");
+    alert("hey")
+});
 
-$("h1, li, p").css({"background-color": "yellow"});
+$("p").dblclick(function(){
+    $(this).css("font-size", "18px")
+});
+
+$("li").hover(function(){
+    $(this).css("background-color", "red")
+},
+function () {
+    $(this).css("background-color", "black")
+});
 
 
-//var $codeup = $(".codeup");
+//$('#submit').click('click', function (){
+//    alert('you clicked the button!')
+//});
 //
-//$codeup.css({"border-width": "1px", "border-color": "red", "border-style": "solid"});
 </script>
 </body>
 </html>
