@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Google Maps Exercise</title>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+<!-- div to hold map -->
+<div id="map-canvas"></div>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFPhw29AdWqiTYYUq7ZRh1dsdZF6vI70I"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function() {
+        "use strict";
+        function initMap() {
+//            var myLatLng = {lat: 29.435221, lng: -98.500719};
+//        // Set our map options
+//        var mapOptions = {
+//            // Set the zoom level
+//            zoom: 20,
+//
+//            // This sets the center of the map at our location
+//            center: {
+//                lat:  29.435221,
+//                lng:  -98.500719
+//            }
+//        };
+            // Create lat and long for our marker position
+            var fivepointslocal = {lat: 29.435221, lng: -98.500719};
+            var map = new google.maps.Maps(document.getElementById("map"), {
+                zoom: 5,
+                center: {
+                    lat: 29.435221,
+                    lng: -98.500719
+                }
+            });
+
+// Add the marker to our existing map
+            var marker = new google.maps.Marker(document.getElementById("map"), {
+                position: fivepointslocal,
+                map: map,
+                title: "Five Points Local"
+            });
+
+// Create a new infoWindow object with content
+            var infoWindow = new google.maps.InfoWindow({
+                content: "Five Points Local"
+            });
+            // To add the marker to the map, call setMap();
+//        marker.setMap(map);
+
+// Open the window using our map and marker
+            infoWindow.open(map, marker);
+
+            // Render the map
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        })();
+</script>
+</body>
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARRbzIYM0ndmtKbdbH8M8d_ifEq2CPNR8&callback=initMap"></script>
