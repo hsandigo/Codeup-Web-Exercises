@@ -6,29 +6,29 @@
 </head>
 <body>
 <h1 id="title">Hello!</h1>
-<!--<p id = "myLove">This paragraph is about my love for Beyoncé <3.</p>-->
+<p id = "myLove">This paragraph is about my love for Beyoncé <3.</p>
 
-<!--<div>-->
-    <!--<ul id = "lovelyReasons">-->
-        <!--<li>I love her</li>-->
-        <!--<li>I love her music</li>-->
-        <!--<li>I love her hair</li>-->
-        <!--<li>I love her style</li>-->
-        <!--<li>I love her performances</li>-->
-    <!--</ul>-->
-<!--</div>-->
+<div>
+    <ul id = "lovelyReasons">
+        <li>I love her</li>
+        <li>I love her music</li>
+        <li>I love her hair</li>
+        <li>I love her style</li>
+        <li>I love her performances</li>
+    </ul>
+</div>
 
-<!--<p class="items">-->
-    <!--The items you need to be like Beyoncé:-->
-<!--</p>-->
-    <!--<ul>-->
-        <!--<li>Big hair</li>-->
-        <!--<li>Fan to make big hair flow #hairography</li>-->
-        <!--<li>6 inch heels</li>-->
-        <!--<li>style</li>-->
-    <!--</ul>-->
+<p class="items">
+    The items you need to be like Beyoncé:
+</p>
+    <ul>
+        <li>Big hair</li>
+        <li>Fan to make big hair flow #hairography</li>
+        <li>6 inch heels</li>
+        <li>style</li>
+    </ul>
 
-<h6>Example</h6>
+<h1>Example</h1>
     <div class = "codeup">
         <p>THIS IS AN IMPORTANT MESSAGE.</p>
             <ol>
@@ -49,47 +49,21 @@
 </script>
 <script>
 "use strict";
+var $listItems = $("li");
+$listItems.css({"font-size": "20px"});
 
-var $codeup = $(".codeup");
+var $highlightedItems = $("h1", "li", "p");
+$highlightedItems.css({"background-color": "blue"});
 
-$codeup.css({"border-width": "1px", "border-color": "red", "border-style": "solid"});
+var contents = $('h1').html();
+alert(contents);
 
-//var contents = $('#lovelyReasons').html();
-//alert(contents);
+
+
+
+//var $codeup = $(".codeup");
 //
-//var contents = $("#myLove").html();
-//alert(contents);
-
-//var $items = $(".items");
-//
-//$items.css({
-//    "font-weight": "bold",
-//    "color": 'blue',
-//    "font-family": "monospaced"
-//});
-//console.log($items.css('font-weight'));
-//
-//$items.each(function(){
-//    console.log($(this).html()); //current element
-//});
-
-
-//    var items = document.getElementById("items");
-//    for (var i = 0; i < items.length; i++) {
-//        items[i].style.fontWeight = "bold";
-//    }
-//    $("items").css("font-weight", "bold");
-//
-//    $(".items").each(function(){
-//    console.log($(this).html()); //current element in the result set
-//    });
-//    console.log(
-//            document.getElementById("title").innerHTML
-//    ); //JS
-//    console.log(
-//            $("#title").html() //.html is a function not a property
-//    );//jQuery
-
+//$codeup.css({"border-width": "1px", "border-color": "red", "border-style": "solid"});
 </script>
 </body>
 </html>
