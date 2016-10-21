@@ -6,28 +6,41 @@
 </head>
 <body>
 <h1 id="title">Hello!</h1>
+<!--<p id = "myLove">This paragraph is about my love for Beyoncé <3.</p>-->
 
-<p id = "myLove">This paragraph is about my love for Beyoncé <3.</p>
+<!--<div>-->
+    <!--<ul id = "lovelyReasons">-->
+        <!--<li>I love her</li>-->
+        <!--<li>I love her music</li>-->
+        <!--<li>I love her hair</li>-->
+        <!--<li>I love her style</li>-->
+        <!--<li>I love her performances</li>-->
+    <!--</ul>-->
+<!--</div>-->
 
-<div>
-    <ul id = "lovelyReasons">
-        <li>I love her</li>
-        <li>I love her music</li>
-        <li>I love her hair</li>
-        <li>I love her style</li>
-        <li>I love her performances</li>
-    </ul>
-</div>
+<!--<p class="items">-->
+    <!--The items you need to be like Beyoncé:-->
+<!--</p>-->
+    <!--<ul>-->
+        <!--<li>Big hair</li>-->
+        <!--<li>Fan to make big hair flow #hairography</li>-->
+        <!--<li>6 inch heels</li>-->
+        <!--<li>style</li>-->
+    <!--</ul>-->
 
-<p class="items">
-    The items you need to be like Beyoncé:
-</p>
-    <ul>
-        <li>Big hair</li>
-        <li>Fan to make big hair flow #hairography</li>
-        <li>6 inch heels</li>
-        <li>style</li>
-    </ul>
+<h6>Example</h6>
+    <div class = "codeup">
+        <p>THIS IS AN IMPORTANT MESSAGE.</p>
+            <ol>
+                <li>hi.</li>
+                <li class = "codeup">beyonce is life.</li>
+                <li>duh.</li>
+            </ol>
+    </div>
+
+<h2 class = "codeup">Put your love on top</h2>
+
+<p>Baby, it's you. <span>You're the one I love.</span>You're the one I need.</p>
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.js"
@@ -37,23 +50,28 @@
 <script>
 "use strict";
 
+var $codeup = $(".codeup");
+
+$codeup.css({"border-width": "1px", "border-color": "red", "border-style": "solid"});
+
 //var contents = $('#lovelyReasons').html();
 //alert(contents);
 //
 //var contents = $("#myLove").html();
 //alert(contents);
 
-var $items = (".items");
-
-$items.css({
-    "font-weight": "bold",
-    "color": 'blue',
-    "font-family": "monospaced"
-});
-
-$items.each(function(){
-    console.log($(this).html()); //current element
-});
+//var $items = $(".items");
+//
+//$items.css({
+//    "font-weight": "bold",
+//    "color": 'blue',
+//    "font-family": "monospaced"
+//});
+//console.log($items.css('font-weight'));
+//
+//$items.each(function(){
+//    console.log($(this).html()); //current element
+//});
 
 
 //    var items = document.getElementById("items");
