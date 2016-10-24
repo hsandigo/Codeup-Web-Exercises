@@ -67,16 +67,16 @@
 <script>
     $("#show-answers").on("click", function(event){ //remember to call the id in the first parens. You only need the # when you're targeting an id
         event.preventDefault();
-        $("dd").toggleClass("invisible"); //this is only matching the elements, which is why you don't need the #dd
+        $("dd").toggle("invisible"); //this is only matching the elements, which is why you don't need the #dd
     });
     $('.first').toggleClass().css('font-weight', 'bold');
 
     $("li").on("click", function () {
-        $(this).parent().addClass("invisible");
+        $(this).parent().toggle("invisible");
     });
 
     $("h3").click(function(){ //with .on you can pass ANY events to that versus .click which limits it to solely clicking it
-        $(this).next().removeClass("invisible");
+        $(this).next().toggle("invisible");
     });
 </script>
 </body>
