@@ -78,6 +78,11 @@
     $("h3").click(function(){ //with .on you can pass ANY events to that versus .click which limits it to solely clicking it
         $(this).next().toggle("invisible");
     });
+
+    $("#state-parks-texas").on("click", function(){
+        $("li").fadeOut();
+    });
+
 </script>
 </body>
 </html>
