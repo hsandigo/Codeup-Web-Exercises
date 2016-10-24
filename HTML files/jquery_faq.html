@@ -31,6 +31,34 @@
     <dd class = invisible>A Shenandoah NP ranger was once struck by lightning 7 times in his career.</dd>
 </dl>
     <a href="#" id="show-answers">Show Answers</a>
+
+<h1>Parks List</h1>
+<h3 class="heading">National Parks</h3>
+<ul id="national-parks">
+    <li class = first>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3 class="heading">State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li class = first>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+<h3 class="heading">State Parks of California</h3>
+<ul id="state-parks-California">
+    <li class = first>Albany State</li>
+    <li>Angel Island</li>
+    <li>Año Nuevo</li>
+    <li>Bean Hollow</li>
+    <li>Benicia State </li>
+</ul>
+
+
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -40,6 +68,22 @@
     $("#show-answers").on("click", function(event){ //remember to call the id in the first parens. You only need the # when you're targeting an id
         event.preventDefault();
         $("dd").toggleClass("invisible"); //this is only matching the elements, which is why you don't need the #dd
+    });
+    $('.first').toggleClass().css('font-weight', 'bold');
+
+    $("li").on("click", function () {
+        $(this).parent().toggleClass("li");
+
+        if ($(this).is("li")) {
+            $(this).parent().addClass("invisible");
+        } else {
+            $(this).parent().removeClass("invisible");
+        }
+    });
+
+    $("h3").on("click", function(event){
+        $("h3").toggleClass("heading")
+
     });
 </script>
 </body>
