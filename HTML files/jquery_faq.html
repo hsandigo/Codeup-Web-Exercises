@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ sheet</title>
+    <link rel="stylesheet" href="../css/jquery_faq.css">
+
+</head>
+<body>
+
+<dl>
+    <dt>Interesting fact #1</dt>
+    <dd class = invisible>Yellowstone may not have been the first national park.</dd>
+    <dt>Interesting fact #2</dt>
+    <dd class = invisible>The second U.S. national park – Mackinac National Park – is now a state park.</dd>
+    <dt>Interesting fact #3</dt>
+    <dd class = invisible>The National Park Service was founded 44 years after Yellowstone was signed in.</dd>
+    <dt>Interesting fact #4</dt>
+    <dd class = invisible>The Park Ranger uniform was created by the U.S. Army Cavalry.</dd>
+    <dt>Interesting fact #5</dt>
+    <dd class = invisible>NPS oversees more than 400 units.</dd>
+    <dt>Interesting fact #6</dt>
+    <dd class = invisible>The U.S. government loans lands from locals.</dd>
+    <dt>Interesting fact #7</dt>
+    <dd class = invisible>The Carlsbad Caverns in New Mexico lunchroom debate continues.</dd>
+    <dt>Interesting fact #8</dt>
+    <dd class = invisible>Visitors were once encouraged to watch bears eat from dumpsters.</dd>
+    <dt>Interesting fact #9</dt>
+    <dd class = invisible>Teddy Roosevelt National Park was Teddy's mourning location.</dd>
+    <dt>Interesting fact #10</dt>
+    <dd class = invisible>A Shenandoah NP ranger was once struck by lightning 7 times in his career.</dd>
+</dl>
+    <a href="#" id="show-answers">Show Answers</a>
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $("#show-answers").on("click", function(event){ //remember to call the id in the first parens. You only need the # when you're targeting an id
+        event.preventDefault();
+        $("dd").toggleClass("invisible"); //this is only matching the elements, which is why you don't need the #dd
+    });
+</script>
+</body>
+</html>
