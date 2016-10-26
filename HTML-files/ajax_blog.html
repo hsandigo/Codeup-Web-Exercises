@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BLOG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<div id="posts"></div>
+<h1 class = "jumbotron">And this blog took me a long time to make because my head is distracted and tired</h1>
+<div id="posts" class="lead"></div>
 
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script>
+    "use strict";
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
+    $.ajax("../data/blog.json").done(function (inventory) {
+        inventory.forEach(function (tool) {
+            $("#posts").append("<p>" + tool.title + "</p><p>" + tool.content + "</p><p>"
+                    + tool.date + "</p><p>" + tool.categories + "</p>");
+        });
+    }).fail(function () {
+        console.log("There was an error");
+    });
+</script>
 </body>
 </html>
