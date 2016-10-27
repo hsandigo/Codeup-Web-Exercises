@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        img:hover {
+            box-shadow: 10px 10px 5px #888888;
+        }
+        img:active {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+<nav></nav>
+<main class="container">
+    <h2>Click Chuck Norris <small>If you dare!</small></h2>
+    <img id="chuck" src="http://www.freeinfosociety.com/media/images/1602.jpg" alt="Not Chuck Testa">
+    <h3></h3>
+</main>
+<footer></footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script>
+
+    $("#chuck").click(function() {
+        $.get("http://api.icndb.com/jokes/random")
+                .done(function(response) {
+                    console.log(response);
+                    $("h3").html(response.value.joke);
+                })
+                .fail(function(error) {
+                    console.log(error);
+                });
+    });
+
+</script>
+</body>
+</html>
