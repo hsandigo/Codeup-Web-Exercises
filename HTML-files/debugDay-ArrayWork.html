@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Work - Debug Day</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // 1) identify the smaller element
+    // 2) remove it from the unordered array
+    // 3) move it to the ordered array
+    // 4) go to step 1). stop if there are no more elements in the unordered array.
+
+    var alphabet = ['e', 'a', 'g', 'c', 'i', 'd', 'f', 'b', 'h'];
+//    var animals = ['elephant', 'ant', 'giraffe', 'cat', 'ice', 'dog', 'frog', 'bee', 'horse'];
+
+    var orderedLetters = [];
+
+    do {
+
+        //step1
+        var min = letters[0]; //e
+        var minIndex = 0;
+        letters.forEach(function (letter, i) {
+            if (min > letter) {
+                min = letter;
+                minIndex = i;
+            }
+        });
+
+        letters.splice(minIndex, 1); //step2
+        orderedLetters.push(min); //step3
+    } while (letters.length > 0);
+
+    console.log(orderedLetters);
+
+    //variadics
+
+    console.log(Math.min(...letters));
+</script>
+</body>
+</html>
